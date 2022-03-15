@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: 'varsity_regular';
+    src: url('/font/varsity_regular.ttf');
+}
+
+@font-face{
+    font-family: 'Academy';
+    src: url('/font/Academy.ttf');
+}
+
+@font-face{
+    font-family: 'AcademyFilled3D';
+    src: url('/font/AcademyFilled3D.ttf');
+}
+
+@font-face{
+    font-family: 'SF-Pro-Display-Light';
+    src: url(font/SF-Pro-Display-Light.otf);
+    
+}
+
+@font-face{
+    font-family: 'SF-Pro-Text-Light';
+    src: url(font/SF-Pro-Text-Light.otf);
+
+}
+
+@font-face{
+    font-family: 'SFUIText-Regular';
+    src: url(font/SFUIText-Regular.otf);
+
+}
+
+
+
+
+:root{
+    /* blue */
+--dark-blue:   #053C5E;
+--blue-shade1: #1D3958;
+--blue-shade2: #353652;
+--blue-shade3: #4C334D;
+--blue-shade4: #643047;
+
+/* red */
+--dark-red:   #7C2E41;
+--red-shade1: #942B3B;
+--red-shade2: #AB2836;
+--red-shade3: #C32530;
+--red-shade4: #DB222A;
+
+/* ** */
+--white: #FFFFFF;
+--linear: #FF0066;
+--footer-dark-blue: #052A41;
+--black: #000000;
+
+/* fonts */
+--code: "Secret Code";
+--scholar: 'varsity_regular';
+--academy: 'Academy';
+--academy-filled: 'AcademyFilled3D';
+--coco: 'COCOGOOSE';
+--apple: 'SF-Pro-Display-Light';
+--apple-bold: 'SF-Pro-Text-Light';
+--apple-bolder: 'SFUIText-Regular';
+/* style */
+--padding10: 10px;
+--default-font-size: 30pt;
+--two2pt: 2pt;
+--four4pt: 4pt;
+--six6pt: 6pt;
+--eight8pt: 8pt;
+}
+
+body {
+    font-size: var(--default-font-size);
+    font-weight: bolder;
+    font-family: var(--apple);
+    background: linear-gradient(var(--dark-blue), var(--linear), var(--dark-blue));
+    color: white;
+}
+
+nav{
+   
+    height: 80px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+main{
+    height: 85vh;
+}
+
+footer{
+    background: var(--footer-dark-blue);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+
+.nav-container{
+width: 100%;
+height: 100%;
+align-content: center;
+display: flex;
+border: 2px solid red;
+}
+
+.name{
+    flex: 1;
+}
+
+.front{
+    width: 100%;
+    height: 400px;
+    background: #053c5ef8;
+}
+.front__greet{
+    border: 2px solid black;
+    height: 100%;
+    text-align: center;
+}
+
+.front__greet span{
+    border: 2px solid black;
+    position: relative;
+    top: 30%;
+    font-size: 3em;
+}
+.svgwave1{
+    height: 50px;
+    width: 100%;
+    
+}
+.introduction{
+    width: 100%;
+    height: 400px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.introduction__text{
+    color: var(--black);
+    font-size: calc(var(--default-font-size) - var(--eight8pt));
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid var(--dark-blue);
+    margin-top: 2em;
+}
+
+.introduction__define{
+    width: 90%;
+    height: fit-content;
+    color: var(--black);
+    text-align: center;
+}
+
+.introduction__define p{
+    font-size: calc((var(--default-font-size) - 16pt));
+}
+
+@media only screen and (max-width: 750px){
+    .burger{
+        width: 50px;
+        height: 100%;
+        background: url(/assets/burgerwhite.png) no-repeat;
+        background-size: 45px;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .front{
+    height: 300px;   
+    }
+    .front__greet{
+        text-align: left;
+    }
+    .front__greet span {
+        font-size: 1.7em;
+    }
+}
