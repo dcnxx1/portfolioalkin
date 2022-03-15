@@ -61,6 +61,9 @@
 --linear: #FF0066;
 --footer-dark-blue: #052A41;
 --black: #000000;
+--gradient-pj-1: #B05B4A;
+--gradient-pj-2: #942B3B;
+
 
 /* fonts */
 --code: "Secret Code";
@@ -84,7 +87,7 @@ body {
     font-size: var(--default-font-size);
     font-weight: bolder;
     font-family: var(--apple);
-    background: linear-gradient(var(--dark-blue), var(--linear), var(--dark-blue));
+    background: var(--dark-blue) ;
     color: white;
 }
 
@@ -116,7 +119,7 @@ border: 2px solid red;
 .front{
     width: 100%;
     height: 400px;
-    background: #053c5ef8;
+    background: linear-gradient(var(--dark-blue), transparent);
 }
 .front__greet{
     border: 2px solid black;
@@ -136,12 +139,13 @@ border: 2px solid red;
 }
 .introduction{
     width: 100%;
-    height: 400px;
+    height: 520px;
+   
     background: white;
     display: flex;
     justify-content: center;
     align-content: flex-start;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -171,27 +175,75 @@ border: 2px solid red;
     width: 750px;
     text-align: center;
 }
-.experience span{
+.experience .__text{
     border-bottom: 2px solid var(--dark-blue);
 }
 
 .icons{
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid red;
+    z-index: 20;
+    margin-top: 10px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.icons .item{
+   width: 100px;
+   height: 100px;
+   object-fit: contain;
+   
+}
+
+
+.projects{
+    background: linear-gradient(var(--gradient-pj-1), var(--gradient-pj-2));
+    width: 100%;
+    height: 900px;
+    z-index: 10;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    justify-content: center;
+    display: flex;
+}
+
+
+.content .__header{
+   font-size: calc((var(--default-font-size) - var(--eight8pt)));
+    border: 2px solid red;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+.content .__text{
+    width: 40%;
+    border: 3px solid green;
+    min-width: fit-content;
+}
+
+
+.card{
+    width: 90%;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+}
+
 
 
 /* svg */
+
 .svgwave2{
-    z-index:2;
-    height: 4rem;
-    position: relative;
-    top: 179px;
     width: 100%;
+    z-index: 12;
 }
-
-
 
 
 
@@ -226,4 +278,20 @@ footer{
     .front__greet span {
         font-size: 1.7em;
     }
+
+    .introduction__text h1{
+        letter-spacing: 2px;
+    }
+    .icons .item{
+        width: 60px;
+    }
+
+    .content .__text{
+        font-size: 20px;
+        width: fit-content;
+        margin-top: 20px;
+    }
+
+    
+    
 }
