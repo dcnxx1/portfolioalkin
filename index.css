@@ -259,35 +259,51 @@ border: 2px solid red;
     grid-template-rows: 13% 15% 50% 22%;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
-    "upper upper" 
+    "upper stack" 
     "second stack"
     "second explanation"
-    "link explanation"
-    ;
+    "link explanation";
+    font-size: clamp(12pt, 1.65vw, 16pt);
 }
 
 .upper{
 grid-area: upper;
 border: 2px solid black;
-
+display: flex;
 }
 .upper .left{
 display: flex;
 border: 2px solid green;
-width: 50%;
+width: 100%;
 height: 100%;
-
+align-items: flex-end;
 }
 .upper .left img{
     width: 80px;
     border: 2px solid black;
-    border-radius: 12px;
-
-    
+    border-radius: 12px;    
+}
+.prj-name{
+    border: 2px solid black;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    flex: 1;
 }
 
-.upper-right{
 
+
+
+.stack{
+    grid-area: stack;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.stack-text{
+    width: 100%;
+    border: 2px solid green;
+    height: 85px;
 }
 
 .second{
@@ -301,10 +317,6 @@ border: 2px solid black;
     height: 100%;
     background-position: center;
     background-size: 70%;
-}
-.stack{
-    grid-area: stack;
-    border: 2px solid black;
 }
 
 .explanation{
@@ -423,6 +435,13 @@ footer{
 
     .upper .left img{
         width: 60px;
+    }
+
+    .upper .left{
+        width: 100%;
+    }
+    .upper .right{
+        display: none;
     }
 
 }
