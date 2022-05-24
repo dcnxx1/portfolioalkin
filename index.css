@@ -309,6 +309,8 @@ align-items: flex-end;
 .second{
 grid-area: second;
 border: 2px solid black;
+display: grid;
+place-items: center;
 }
 .device-img{
     background: url(/assets/desktop-qr.png) no-repeat;
@@ -425,12 +427,16 @@ footer{
         ;
     }
 
+    .second{
+        max-width: 300px;
+    }
     .device-img{
         width: 100%;
         height: 100%;
         background: url(/assets/iphone-cover.png) no-repeat;
         background-position: center;
         background-size: 100%;
+        max-width: 190px;
     }
 
     .upper .left img{
